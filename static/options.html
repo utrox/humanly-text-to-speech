@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  body { font: 14px/1.5 system-ui, sans-serif; margin: 16px; color: #1c2333; max-width: 520px; }
+  @media (prefers-color-scheme: dark) { body { color: #eef0e6; background: #1c2333; } p { color: #9ba4b7 !important; } }
+  label { display: flex; gap: 10px; align-items: flex-start; margin: 0 0 14px; cursor: pointer; }
+  input { margin-top: 3px; accent-color: #7a8c12; }
+  p { margin: 2px 0 0; color: #4a5368; }
+  button { font: inherit; padding: 6px 12px; border-radius: 8px; border: 1px solid #9ba4b7; background: transparent; color: inherit; cursor: pointer; margin-right: 8px; }
+  #status { margin-left: 4px; }
+</style>
+</head>
+<body>
+  <label><input type="checkbox" id="interceptPdf"><span>Open PDFs in the reader<p>PDF links open in the read-aloud viewer instead of Firefox's built-in one.</p></span></label>
+  <label><input type="checkbox" id="mainOnly"><span>Read main text only<p>Skips menus, sidebars, ads and comments on web pages.</p></span></label>
+  <label><input type="checkbox" id="autoScroll"><span>Follow along<p>Scrolls the page to keep the sentence being read in view.</p></span></label>
+  <p id="helper" style="margin:0 0 14px">Checking the voice engine…</p>
+  <button id="recheck">Check again</button>
+  <button id="openPdf">Open a PDF file…</button>
+  <button id="clearCache">Delete downloaded voice</button><span id="status"></span>
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+# Dependencies and build output
+node_modules/
+dist/
+out/
+web-ext-artifacts/
+
+# Helper: local Python environment and downloaded model files
+helper/venv/
+helper/*.onnx
+helper/*.bin
+helper/*.wav
+__pycache__/
+*.pyc
+
+# Editors and OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

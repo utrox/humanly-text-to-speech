@@ -1,0 +1,63 @@
+{
+  "manifest_version": 2,
+  "name": "Humanly Text to Speech",
+  "short_name": "Humanly TTS",
+  "version": "1.4.0",
+  "description": "Read web pages and PDFs aloud in Firefox with a natural, human-sounding voice that runs on your computer. Click any sentence to jump there.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "humanly-tts@utrox.github.io",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "permissions": [
+    "<all_urls>",
+    "activeTab",
+    "tabs",
+    "storage",
+    "unlimitedStorage",
+    "contextMenus",
+    "webRequest",
+    "webRequestBlocking",
+    "nativeMessaging"
+  ],
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Read this page aloud",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png"
+    }
+  },
+  "commands": {
+    "toggle-reader": {
+      "suggested_key": {
+        "default": "Alt+Shift+R"
+      },
+      "description": "Open or close the reader on this page"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "web_accessible_resources": [
+    "viewer.html"
+  ],
+  "content_security_policy": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'",
+  "author": "utrox",
+  "homepage_url": "https://github.com/utrox/humanly-text-to-speech"
+}

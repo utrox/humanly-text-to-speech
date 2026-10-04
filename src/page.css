@@ -1,0 +1,11 @@
+/* Inserted into pages by the extension (bypasses page CSP). */
+html.__nr_on nr-s { cursor: pointer; }
+nr-s.__nr_hov { background-color: rgba(214, 240, 80, 0.22) !important; border-radius: 2px; }
+nr-s.__nr_cur {
+  background-color: rgba(214, 240, 80, 0.62) !important;
+  color: #14181f !important;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(214, 240, 80, 0.62);
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+@media print { nr-ui { display: none !important; } nr-s { background: none !important; box-shadow: none !important; } }

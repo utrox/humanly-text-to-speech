@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PDF reader</title>
+  <link rel="icon" href="icons/icon-48.png">
+  <link rel="stylesheet" href="viewer.css">
+  <link rel="stylesheet" href="page.css">
+</head>
+<body>
+  <header class="bar">
+    <button id="openBtn" class="btn">Open PDF</button>
+    <span id="docTitle" class="title"></span>
+    <div class="pager" hidden>
+      <label class="sr" for="pageNum">Page</label>
+      <input id="pageNum" type="number" min="1" value="1" inputmode="numeric"> <span>of <span id="pageCount">0</span></span>
+    </div>
+    <div class="zoom" hidden>
+      <button id="zoomOut" class="btn sq" aria-label="Zoom out">−</button>
+      <span id="zoomLabel">100%</span>
+      <button id="zoomIn" class="btn sq" aria-label="Zoom in">+</button>
+    </div>
+    <button id="readBtn" class="btn" hidden>Read aloud</button>
+    <button id="originalBtn" class="btn ghost" hidden title="Open this PDF in Firefox's own viewer (for forms and annotations)">Firefox viewer</button>
+  </header>
+
+  <main id="pages" aria-label="PDF pages"></main>
+
+  <section id="empty" class="empty" hidden>
+    <h1>Open a PDF to read it aloud</h1>
+    <p id="emptyText">Choose a file or drop it anywhere on this page. It stays on your computer.</p>
+    <button id="chooseBtn" class="btn big">Choose PDF</button>
+  </section>
+
+  <div id="drop" class="drop" hidden>Drop the PDF to open it</div>
+  <input id="fileInput" type="file" accept="application/pdf,.pdf" hidden>
+  <script type="module" src="viewer.js"></script>
+</body>
+</html>
